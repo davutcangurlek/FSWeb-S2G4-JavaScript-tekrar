@@ -83,49 +83,60 @@ function CemberinAlani(yarıçap,pi){
 	var ucetambolunenler, enkucuk, enbuyuk, ucebolunenlerintoplami, besyuzdenkucuksayilar, siralisayilar, tekraredensayilar;
 	
 	//3a çözümü
-
-	/* kodlar buraya */
-	
-	
-	
-	// 3b çözümü:
-
-	/* kodlar buraya */
+	enkucuk = 1000;
+  	enbuyuk = 0;
+	for (let i =0; i<sayilar.length;i++) {
+		if(sayilar[i]<enkucuk){
+			enkucuk=sayilar[i];
+		}
+	}
+	//console.log(enkucuk)
+	for (let i = 0; i < sayilar.length; i++) {
+		if (sayilar[i] > enbuyuk) {
+      	enbuyuk = sayilar[i];
+    }
+		}
 		
+	//console.log(enbuyuk);
+    // 3b çözümü:
+		ucetambolunenler = [];
+		for(let i= 0; i<sayilar.length; i++){
+			if(sayilar[i] % 3 === 0){
+				ucetambolunenler.push(sayilar[i]);
+
+			}
+
+		}
+		//console.log(ucetambolunenler)
+    /* kodlar buraya */
+
+    //3c çözümü:
 		
-		
-	//3c çözümü:
-	
-	/* kodlar buraya */
+		for (let i=0;i<ucetambolunenler.length; i++) {
+			ucetambolunenler.reduce((ucebolunenlerintoplami,ucetambolunenler) => {
+	 ucebolunenlerintoplami+=ucetambolunenler[i]; 
+			},0)
+		}
+		console.log(ucebolunenlerintoplami)
+    /* kodlar buraya */
 
-	
-	
-	//3d çözümü
-	
-	/* kodlar buraya */
+    //3d çözümü
 
+    /* kodlar buraya */
 
+    //3e çözümü
 
-	//3e çözümü
+    /* kodlar buraya */
 
-	/* kodlar buraya */
-	
-	
-	//3f çözümü
-	
-	/* kodlar buraya */
+    //3f çözümü
 
+    /* kodlar buraya */
 
-
-
-	
-		
-
-/*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
-function sa(){
-    console.log('Kodlar çalışıyor');
-    return 'as';
-}
+    /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
+    function sa() {
+      console.log("Kodlar çalışıyor");
+      return "as";
+    }
 sa();
 module.exports = {
     sa,
